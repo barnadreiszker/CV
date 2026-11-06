@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barna Dreiszker | CV & Portfolio</title>
+  <meta name="description" content="Personal CV and Portfolio of Barna Dreiszker — Business & Management Student at Eötvös Loránd University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0f172a] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Ambient glowing background blobs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-base shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          BD
+        </span>
+        <span class="font-serif tracking-normal text-lg sm:text-xl">Barna <span class="text-cyan-400">Dreiszker</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+        <a href="#studies" class="hover:text-cyan-400 transition-colors">Education</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="Barna_Dreiszker_CV.pdf" download class="btn-primary text-xs sm:text-sm">
+          <i class="fa-solid fa-file-arrow-down mr-1.5"></i> Download CV
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-6 border-b border-slate-800/80 bg-slate-900/95 backdrop-blur-xl">
+      <div class="flex flex-col gap-4 text-sm font-medium text-slate-300 pt-2">
+        <a href="#about" class="mobile-link hover:text-cyan-400 py-1">About</a>
+        <a href="#experience" class="mobile-link hover:text-cyan-400 py-1">Experience</a>
+        <a href="#studies" class="mobile-link hover:text-cyan-400 py-1">Education</a>
+        <a href="#skills" class="mobile-link hover:text-cyan-400 py-1">Skills</a>
+        <a href="#contact" class="mobile-link hover:text-cyan-400 py-1">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-24">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-[85vh] flex flex-col md:flex-row items-center justify-between gap-12 pt-8 pb-16">
+      <div class="flex-1 space-y-6 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs sm:text-sm font-medium tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          Student of Business & Management @ ELTE
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">Barna Dreiszker</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto md:mx-0 font-normal leading-relaxed">
+          Ambitious university student specializing in Business and Management at Eötvös Loránd University. Active member of Budapest Investment Club, passionate about financial markets, corporate strategy, operations, and analytical problem solving.
+        </p>
+
+        <!-- Quick Contacts & Call to Actions -->
+        <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
+          <a href="#contact" class="btn-primary">
+            <i class="fa-solid fa-paper-plane mr-2"></i> Get In Touch
+          </a>
+          <a href="Barna_Dreiszker_CV.pdf" target="_blank" class="btn-secondary">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View PDF CV
+          </a>
+        </div>
+
+        <!-- Highlights Badges / Partner Affiliations -->
+        <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-800/80">
+          <a href="#studies" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-cyan-500/40 hover:bg-slate-800/60 transition-all text-left group">
+            <div class="w-10 h-10 rounded-lg bg-[#012850] border border-cyan-500/30 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform overflow-hidden">
+              <img src="elte-logo.png" alt="ELTE Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">ELTE</div>
+              <div class="text-[11px] text-slate-400 leading-tight">Business & Management</div>
+            </div>
+          </a>
+
+          <a href="#experience" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-cyan-500/40 hover:bg-slate-800/60 transition-all text-left group">
+            <div class="w-10 h-10 rounded-lg bg-slate-900 border border-cyan-500/30 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform overflow-hidden">
+              <img src="bic-logo-light.png" alt="BIC Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div>
+              <div class="text-sm font-bold text-cyan-400">BIC Member</div>
+              <div class="text-[11px] text-slate-400 leading-tight">Budapest Investment Club</div>
+            </div>
+          </a>
+
+          <a href="#studies" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-purple-500/40 hover:bg-slate-800/60 transition-all text-left group">
+            <div class="w-10 h-10 rounded-lg bg-slate-900 border border-purple-500/30 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform overflow-hidden">
+              <img src="teleki-logo-light.png" alt="Teleki Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div>
+              <div class="text-sm font-bold text-purple-400">Teleki Blanka</div>
+              <div class="text-[11px] text-slate-400 leading-tight">Advanced History Track</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Photo Card with Glowing Frame -->
+      <div class="relative flex-shrink-0 group">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700"></div>
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border border-slate-700/60 bg-slate-900 shadow-2xl">
+          <img src="barna-dreiszker.jpg" alt="Barna Dreiszker" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-left">
+            <p class="text-white font-semibold text-sm">Barna Dreiszker</p>
+            <p class="text-cyan-300 text-xs">Budapest, Hungary</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 border-t border-slate-800/80 scroll-mt-24">
+      <div class="text-center md:text-left mb-10">
+        <span class="text-cyan-400 font-semibold tracking-wider uppercase text-xs">Introduction</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">About Me</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 md:col-span-2 space-y-4">
+          <h3 class="text-xl font-semibold text-white">Who I am</h3>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            I am an undergraduate student at Eötvös Loránd University (ELTE) studying Business and Management. My academic path is complemented by hands-on student leadership at Budapest Investment Club (BIC), where I dive into corporate valuation, market research, and macroeconomic dynamics.
+          </p>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Alongside my academic focus, I bring practical operational and premium client service experience from hospitality at the Puskás Arena Skybox and logistics at E.C. Kft. I am driven by high standards, rigorous work ethics, and the constant drive to expand my analytical horizons.
+          </p>
+
+          <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+              <i class="fa-solid fa-location-dot text-cyan-400 text-lg"></i>
+              <div>
+                <div class="text-xs text-slate-400">Location</div>
+                <div class="text-white font-medium">Budapest, Hungary</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+              <i class="fa-solid fa-envelope text-cyan-400 text-lg"></i>
+              <div>
+                <div class="text-xs text-slate-400">Email</div>
+                <a href="mailto:dreiszker.barna@gmail.com" class="text-white font-medium hover:text-cyan-400 transition-colors">dreiszker.barna@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+              <i class="fa-solid fa-phone text-cyan-400 text-lg"></i>
+              <div>
+                <div class="text-xs text-slate-400">Phone</div>
+                <a href="tel:+36302946931" class="text-white font-medium hover:text-cyan-400 transition-colors">+36 30 294 6931</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+              <i class="fa-solid fa-user-graduate text-cyan-400 text-lg"></i>
+              <div>
+                <div class="text-xs text-slate-400">Status</div>
+                <div class="text-white font-medium">Undergraduate Student</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobbies & Personal Interests -->
+        <div class="glass-card p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-heart-pulse text-cyan-400"></i> Hobbies & Interests
+            </h3>
+            <div class="space-y-3">
+              <div class="hobby-item">
+                <i class="fa-solid fa-bicycle text-cyan-400"></i>
+                <div>
+                  <div class="font-medium text-white text-sm">Mountain Biking</div>
+                  <div class="text-xs text-slate-400">Endurance & Outdoor Adventure</div>
+                </div>
+              </div>
+              <div class="hobby-item">
+                <i class="fa-solid fa-futbol text-cyan-400"></i>
+                <div>
+                  <div class="font-medium text-white text-sm">Football</div>
+                  <div class="text-xs text-slate-400">Team Dynamics & Agility</div>
+                </div>
+              </div>
+              <div class="hobby-item">
+                <i class="fa-solid fa-baseball text-cyan-400"></i>
+                <div>
+                  <div class="font-medium text-white text-sm">Tennis</div>
+                  <div class="text-xs text-slate-400">Precision & Focus</div>
+                </div>
+              </div>
+              <div class="hobby-item">
+                <i class="fa-solid fa-chess-knight text-cyan-400"></i>
+                <div>
+                  <div class="font-medium text-white text-sm">Board Games</div>
+                  <div class="text-xs text-slate-400">Strategic & Tactical Thinking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800/80">
+            <span class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Languages</span>
+            <!-- Side-by-side grid of languages -->
+            <div class="mt-3 grid grid-cols-2 gap-3">
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-white font-semibold text-xs sm:text-sm">English</span>
+                  <span class="text-cyan-400 text-xs font-bold">C1</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden mb-1">
+                  <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-1.5 rounded-full w-[90%]"></div>
+                </div>
+                <span class="text-[10px] text-slate-400 block">B2 Certificate</span>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-white font-semibold text-xs sm:text-sm">German</span>
+                  <span class="text-cyan-400 text-xs font-bold">B2</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden mb-1">
+                  <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-1.5 rounded-full w-[70%]"></div>
+                </div>
+                <span class="text-[10px] text-slate-400 block">Intermediate Proficient</span>
+              </div>
+            </div>
+
+            <div class="mt-2.5 flex items-center justify-between px-3 py-2 rounded-lg bg-slate-800/20 text-xs text-slate-400 border border-slate-800/60">
+              <span class="text-slate-300 font-medium">Hungarian</span>
+              <span class="text-cyan-400 font-medium">Native Language</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-16 border-t border-slate-800/80 scroll-mt-24">
+      <div class="text-center md:text-left mb-10">
+        <span class="text-cyan-400 font-semibold tracking-wider uppercase text-xs">Career & Roles</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Experiences</h2>
+      </div>
+
+      <div class="relative border-l-2 border-slate-800 ml-4 md:ml-6 space-y-10">
+
+        <!-- Role 1: BIC -->
+        <div class="relative pl-8 md:pl-10 group">
+          <div class="timeline-dot"></div>
+          <div class="glass-card p-6 transition-all duration-300 hover:border-cyan-500/50">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-700/60 p-2 flex items-center justify-center flex-shrink-0 group-hover:border-cyan-500/40 transition-colors shadow-inner">
+                  <img src="bic-logo-light.png" alt="Budapest Investment Club Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Budapest Investment Club (BIC)</h3>
+                    <a href="https://www.facebook.com/budapestinvestmentclub" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors" title="Visit BIC Facebook page">
+                      <i class="fa-brands fa-facebook text-sm"></i>
+                    </a>
+                  </div>
+                  <p class="text-sm text-cyan-300 font-medium">Active Member</p>
+                </div>
+              </div>
+              <span class="badge-time self-start sm:self-auto">Fall 2025 – Present</span>
+            </div>
+            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed mt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>As an active member, regularly participate in professional lectures, workshops, and community events on finance and investment topics.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Strengthened analytical and critical thinking skills, as well as the abilities necessary for high-stakes teamwork and professional communication.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Further expanded practical knowledge of financial markets, investment strategies, and corporate valuation and analysis.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Culinary Staff Member -->
+        <div class="relative pl-8 md:pl-10 group">
+          <div class="timeline-dot"></div>
+          <div class="glass-card p-6 transition-all duration-300 hover:border-cyan-500/50">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Culinary Staff Member</h3>
+                <p class="text-sm text-cyan-300 font-medium">Puskás Aréna Skybox</p>
+              </div>
+              <span class="badge-time">Fall 2024 – Fall 2026</span>
+            </div>
+            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed mt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>At the Puskás Aréna Skybox, deliver high-quality hospitality service to domestic and international VIP guests in a premium setting.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Gained deep experience in providing customer-focused service, communicating seamlessly under live events, and promptly resolving emergent issues.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Learned to execute calmly and effectively under high-pressure conditions while maintaining strict attention to detail and team synergy.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3: Logistics Assistant -->
+        <div class="relative pl-8 md:pl-10 group">
+          <div class="timeline-dot"></div>
+          <div class="glass-card p-6 transition-all duration-300 hover:border-cyan-500/50">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Logistics Assistant</h3>
+                <p class="text-sm text-cyan-300 font-medium">E.C. Kft.</p>
+              </div>
+              <span class="badge-time">Summer / Operational Intern</span>
+            </div>
+            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed mt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Gained hands-on insight into the mechanics of logistics operations, warehouse management systems, and freight forwarding processes.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Participated in administrative and organizational workflows, supporting daily business logistics and operational accuracy.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0 text-xs"></i>
+                <span>Refined organizational discipline, sense of accountability, and capability to work autonomously within commercial enterprise processes.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION / STUDIES SECTION -->
+    <section id="studies" class="py-16 border-t border-slate-800/80 scroll-mt-24">
+      <div class="text-center md:text-left mb-10">
+        <span class="text-cyan-400 font-semibold tracking-wider uppercase text-xs">Academic Background</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Studies & Education</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- University -->
+        <div class="glass-card p-6 border-l-4 border-l-cyan-500 relative flex flex-col justify-between group hover:border-l-cyan-400 transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs uppercase tracking-wider font-semibold text-cyan-400">Higher Education</span>
+              <span class="badge-time">Sep 2024 – Present</span>
+            </div>
+            <div class="flex items-start gap-4 mb-3">
+              <div class="w-14 h-14 rounded-xl bg-[#012850] border border-cyan-500/30 p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform overflow-hidden">
+                <img src="elte-logo.png" alt="ELTE University Logo" class="max-h-full max-w-full object-contain">
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Eötvös Loránd University (ELTE)</h3>
+                <p class="text-sky-300 font-medium text-sm mt-0.5">Department of Business and Management</p>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Enrolled in Bachelor of Science program covering corporate finance, managerial economics, marketing, statistics, business law, and strategic administration.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-building-columns text-cyan-400"></i>
+              <span>Budapest, Hungary • Active Student</span>
+            </div>
+            <a href="https://www.elte.hu" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline inline-flex items-center gap-1">
+              elte.hu <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="glass-card p-6 border-l-4 border-l-purple-500 relative flex flex-col justify-between group hover:border-l-purple-400 transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs uppercase tracking-wider font-semibold text-purple-400">Secondary Education</span>
+              <span class="badge-time">Sep 2020 – June 2024</span>
+            </div>
+            <div class="flex items-start gap-4 mb-3">
+              <div class="w-14 h-14 rounded-xl bg-slate-800/80 border border-slate-700/60 p-2 flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform overflow-hidden">
+                <img src="teleki-logo-light.png" alt="Teleki Blanka Gimnázium Logo" class="max-h-full max-w-full object-contain">
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Teleki Blanka Gimnázium</h3>
+                <p class="text-sky-300 font-medium text-sm mt-0.5">Advanced History Track</p>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Graduated with advanced academic track emphasizing historical analysis, social and economic structures, rigorous debate, and critical contextual thinking.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-purple-400"></i>
+              <span>Budapest, Hungary • Matura Diploma</span>
+            </div>
+            <a href="https://tbg.hu" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline inline-flex items-center gap-1">
+              tbg.hu <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORE SKILLS SECTION -->
+    <section id="skills" class="py-16 border-t border-slate-800/80 scroll-mt-24">
+      <div class="text-center md:text-left mb-10">
+        <span class="text-cyan-400 font-semibold tracking-wider uppercase text-xs">Capabilities & Strengths</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Core Competencies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Analytical Thinking</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Proficient in breaking down complex scenarios, evaluating data, and deriving objective, evidence-based conclusions.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-4">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Excellent Communication</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Strong verbal and written presentation abilities, honed through VIP hospitality service, committee work, and academic discourse.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
+            <i class="fa-solid fa-arrows-spin"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Adaptability</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Rapid learner capable of pivoting efficiently in dynamic fast-paced environments, whether in operational logistics or event management.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Organizational Skills</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            High degree of structure, meticulous planning, time allocation, and systematic workflow management.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Reliability & Integrity</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Dependable team contributor with a profound sense of personal accountability, punctuality, and attention to quality standards.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 skill-card">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xl mb-4">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Financial & Business Mindset</h3>
+          <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+            Committed curiosity for financial markets, macro indicators, business models, and investment research via Budapest Investment Club.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 border-t border-slate-800/80 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-cyan-400 font-semibold tracking-wider uppercase text-xs">Reach Out</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Get In Touch</h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-3">
+          I am always open to internship opportunities, student projects, investment club networking, or professional discussions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+        <!-- Email -->
+        <a href="mailto:dreiszker.barna@gmail.com" class="glass-card p-6 text-center hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 block group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3 class="text-white font-semibold text-base mb-1">Email</h3>
+          <p class="text-cyan-400 text-xs sm:text-sm break-all font-mono">dreiszker.barna@gmail.com</p>
+          <span class="text-slate-400 text-xs mt-3 block">Send an email &rarr;</span>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+36302946931" class="glass-card p-6 text-center hover:border-cyan-500/50 hover:-translate-y-1 transition-all duration-300 block group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h3 class="text-white font-semibold text-base mb-1">Phone</h3>
+          <p class="text-sky-400 text-xs sm:text-sm font-mono">+36 30 294 6931</p>
+          <span class="text-slate-400 text-xs mt-3 block">Call directly &rarr;</span>
+        </a>
+
+        <!-- Location -->
+        <div class="glass-card p-6 text-center">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl mb-4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="text-white font-semibold text-base mb-1">Location</h3>
+          <p class="text-slate-300 text-xs sm:text-sm">1145 Budapest, Korong u. 47.</p>
+          <span class="text-slate-400 text-xs mt-3 block">Budapest, Hungary</span>
+        </div>
+
+      </div>
+
+      <!-- CV Download Banner -->
+      <div class="mt-12 glass-card p-8 text-center max-w-3xl mx-auto border border-cyan-500/30 bg-gradient-to-r from-cyan-950/30 via-slate-900/60 to-blue-950/30">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Need a printable CV copy?</h3>
+        <p class="text-slate-300 text-sm max-w-md mx-auto mb-6">
+          Download the official PDF resume with complete work history, references, and educational milestones.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="Barna_Dreiszker_CV.pdf" download class="btn-primary">
+            <i class="fa-solid fa-download mr-2"></i> Download Resume (.PDF)
+          </a>
+          <button id="copy-email-btn" class="btn-secondary">
+            <i class="fa-regular fa-copy mr-2"></i> Copy Email
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <p>&copy; <span id="current-year">2026</span> Barna Dreiszker. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-cyan-400 transition-colors">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-hidden fixed bottom-6 right-6 px-4 py-3 rounded-xl bg-cyan-600 text-white font-medium text-sm shadow-xl flex items-center gap-2 z-50">
+    <i class="fa-solid fa-check"></i>
+    <span id="toast-message">Email copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
